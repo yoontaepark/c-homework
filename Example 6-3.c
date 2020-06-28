@@ -5,25 +5,26 @@
 void bubble(int*, const int, int (*)(int, int));
 int ascending(const int, const int);
 int descending(const int, const int);
+void swap(int*, int*);
 
 void main()
 {
 	int a[SIZE] = {2,6,4,8,10,12,89,68,45,37};
 	int counter, order;
-	printf("¿À¸§Â÷¼ø Á¤·ÄÀº 1, ³»¸²Â÷¼ø Á¤·ÄÀº 2¸¦ ´©¸£¼¼¿ä : ");
+	printf("ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ì€ 1, ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ì€ 2ë¥¼ ëˆ„ë¥´ì„¸ìš” : ");
 	scanf("%d", &order);
-	printf("\n ¿ø·¡ µ¥ÀÌÅÍ \n");
+	printf("\n ì›ë˜ ë°ì´í„° \n");
 	for (counter = 0; counter <= SIZE - 1; counter++)
 		printf("%4d", a[counter]);
 	if (order == 1)
 	{
 		bubble(a, SIZE, ascending);
-		printf("\n ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÑ µ¥ÀÌÅÍ \n");
+		printf("\n ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œ ë°ì´í„° \n");
 	}
 	else
 	{
 		bubble(a, SIZE, descending);
-		printf("\n ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÑ µ¥ÀÌÅÍ \n");
+		printf("\n ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œ ë°ì´í„° \n");
 	}
 	for (counter = 0; counter <= SIZE - 1; counter++)
 		printf("%4d", a[counter]);
